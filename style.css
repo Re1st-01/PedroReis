@@ -57,6 +57,7 @@
         border: 1px solid var(--black);
         color: var(--green);
         font-weight: bold;
+        border: 1px solid black;
         height: 80px;
 
         display: flex;
@@ -237,8 +238,13 @@
 
         border-radius: 16px;
         max-width: 360px;
-        text-align: left;
+        text-align: center;
         padding: 50px 25px;
+    }
+
+    .card-button{
+        position:relative;
+        margin: 50px;
     }
 
     .portfolio .portfolio-container .portfolio-card .img-container {
@@ -249,19 +255,21 @@
 
     .portfolio .portfolio-container .portfolio-card .img-container img {
         width: 100%;
+        border: 1px solid black;
+        border-radius: 16px;
     }
 
     .portfolio-container .portfolio-card .img-container .line {
         
-            width: calc(100% + 24px);
-            height: calc(100% + 24px);
-            border: 1px solid var(--green);
-            border-radius: 16px;
-            transform: rotate(-1.93deg);
+        width: calc(100% + 24px);
+        height: calc(100% + 24px);
+        border: 1px solid var(--green);
+        border-radius: 16px;
+        transform: rotate(-1.93deg);
         
-            position: absolute;
-            top: -12px;
-            left: calc(50% - 100%/2 - 12px);
+        position: absolute;
+        top: -12px;
+        left: calc(50% - 100%/2 - 12px);
         
     }
 
@@ -289,11 +297,25 @@
         margin-left: 10px;
     }
 
+    .links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        justify-content: center;
+    }
+
+    .card-button {
+        width: 150px;
+        margin-top: 5px;
+    }
+
     p {
-        margin: 10px;
+        margin-bottom: 40px;
     }
 
     .curriculum {
+        margin-top: 150px;
         padding: 0 100px;
         text-align: center;
     }
@@ -454,30 +476,17 @@
 
 
     /* celular */
-    @media (max-width: 480px) {
+    @media (max-width: 360px) {
         body {
             margin-bottom: calc(var(--menu-height) + 50px);
         }
-
+    
         header .container{
             margin-left:100px;
-            padding: 0 30px;
+            padding: 0 20px;
+            display: none;
         }
     
-        header .container img {
-            display: none;
-            margin-bottom: 70px;
-        }
-
-        .dev{
-            display:none;
-        }
-
-        button {
-            display: flex;
-            align-items: center;
-        }
-
         nav {
             position: fixed;
             width: 100%;
@@ -485,54 +494,53 @@
             top: unset;
             padding: 0 15px;
         }
-
+    
         nav ul a {
             font-size: 12px;
         }
-
+    
         nav ul a svg {
             display: block;
             margin: 0 auto 10px;
         }
-
+    
         .about-me {
-            padding: 40px;
-            margin-top: 10px;
-        
+            padding: 20px;
         }
-
+    
         .services {
-            margin: 70px 0;
+            margin: 0;
         }
-
+    
         .services .services-container, .portfolio-container {
-            padding: 0 20px;
+            padding: 20px;
+            margin-right: 0px;
         }
-
+    
         .portfolio .portfolio-container {
             margin-top: 70px;
         }
-
+    
         .portfolio {
             margin: 100px 0 50px;
+            width: 100%;
         }
-
+    
         .curriculum {
             padding: 0 20px;
         }
-
+        .curriculum-img{
+            height: 320px;
+        }
+    
         .curriculum .container .content .curriculum-info {
-            display: grid;
-            grid-template-columns: 150px auto;
-            grid-gap: 1rem;
-            margin-bottom: 50px;
-            padding: 0 15px;
+            font-size: 10px;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 20px;
         }
-
-        span {
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
+        .secondary-button {
+            font-size: 15px;
+            height: 50px;
+            margin-bottom: 0px;
         }
-        
     }
