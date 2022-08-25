@@ -263,7 +263,7 @@
         
         width: calc(100% + 24px);
         height: calc(100% + 24px);
-        border: 1px solid var(--green);
+        border: 1px solid var(--purple);
         border-radius: 16px;
         transform: rotate(-1.93deg);
         
@@ -286,6 +286,7 @@
         display: flex;
         list-style: none;
         padding: 0;
+        gap: 32px;
     }
 
     .portfolio-card .language-container ul li + li {
@@ -297,12 +298,18 @@
         margin-left: 10px;
     }
 
+    .portfolio p {
+        padding: 0px 20px;
+    }
+
     .links{
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 32px;
         justify-content: center;
+        position:0 20px;
+        margin: 10px;
     }
 
     .card-button {
@@ -450,6 +457,7 @@
     @media (max-width: 767px) {
 
         header .container{
+            display: inline;
             margin-left:100px ;
         }
         .dev{
@@ -474,6 +482,70 @@
         }
     }
 
+    @media (max-width: 480px) {
+        body {
+            margin-bottom: calc(var(--menu-height) + 50px);
+        }
+        
+        header .container {
+            padding: 0 40px;
+            display: inline;
+        
+            
+        }
+        
+        header .container h1 {
+            text-align: center;
+            padding: 4px;
+            height: 20%;
+        }
+    
+        nav {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            top: unset;
+            padding: 0 15px;
+        }
+    
+        nav ul a {
+            font-size: 12px;
+        }
+    
+        nav ul a svg {
+            display: block;
+            margin: 0 auto 10px;
+        }
+    
+        .about-me {
+            padding: 40px;
+        }
+    
+        .services {
+            margin: 70px 0;
+        }
+    
+        .services .services-container, .portfolio-container {
+            padding: 0 20px;
+        }
+    
+        .portfolio .portfolio-container {
+            margin-top: 70px;
+        }
+    
+        .portfolio {
+            margin: 100px 0 50px;
+        }
+    
+        .curriculum {
+            padding: 0 20px;
+        }
+    
+        .curriculum .container .content .curriculum-info {
+            padding: 0 15px;
+        }
+    }
+
 
     /* celular */
     @media (max-width: 360px) {
@@ -482,8 +554,12 @@
         }
     
         header .container{
-            margin-left:100px;
-            padding: 0 20px;
+            width: 100%;
+            display: flex;
+            
+            text-align: center;
+        }
+        .dev{
             display: none;
         }
     
@@ -493,6 +569,7 @@
             bottom: 0;
             top: unset;
             padding: 0 15px;
+            
         }
     
         nav ul a {
